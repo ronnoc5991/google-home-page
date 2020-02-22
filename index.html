@@ -3,11 +3,12 @@
 <style>
 
     #container{
-        width: 100vw;
-        height: 100vh;
+        width: 98vw;
+        height: 98vh;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 8fr 1fr;
+        font-family: Arial, Helvetica, sans-serif;
         }
 
     #header1{
@@ -21,6 +22,7 @@
         font-family: Arial, Helvetica, sans-serif;
         color: rgba(0,0,0,0.87);
         font-size: 13;
+        margin: 5px -18px 0px 0px;
         }
 
         #gmail{
@@ -35,12 +37,34 @@
             padding: 10px;
         }
 
-        #images:hover{
-            text-decoration: underline;
+        #cube-container{
+            height: 8px;
+            width: 18px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 2px;
+            margin: 10px 10px 0px 10px;
+        }
+
+        .cubes{
+            background-color: rgba(0,0,0,0.87);
+            height: 4px;
+            width: 4px;
         }
 
         #profile{
-            padding:10px 30px 10px 10px;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background-color:rgba(0,0,0,0.87);
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            vertical-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px 15px 0px 10px;
         }
 
     #main{
@@ -61,8 +85,34 @@
         text-align: center;
     }
 
+    #search-bar{
+        border-radius: 24px;
+        width: 482px;
+        height: 44px;
+    }
+
     #buttons{
         padding-top: 25px;
+    }
+
+    button{
+        padding: 0px 16px 0px 16px;
+        background-color: #f2f2f2;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #5F6368;
+        font-size: 14;
+        border-radius: 4px;
+        border: 1px;
+        margin: 11px 4px 11px 4px;
+        height: 36px;
+    }
+
+    button:hover{
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        background-image: webkit-linear-gradient (top, #f8f8f8, #f1f1f1);
+        background-color: #f8f8f8;
+        border: 1px solid #c6c6c6;
+        color: #222;
     }
 
     #footer{
@@ -73,22 +123,65 @@
         grid-template-rows: 1fr 2fr;
         color: rgba(0,0,0,.54);
         background: #f2f2f2;
+        font-size: 15;
     }
 
     #country{
-        padding-left:40px;
-        padding-top: 5px;
-        align-content: center;
+        padding-left:20px;
+        padding-top: 6px;
         border-bottom: 1px solid #e4e4e4;
     }
+    
+    .selectable:hover{
+        text-decoration: underline;
+    }
+
+    .cursor:hover{
+        cursor: pointer;
+    }
+
+    #bottom-bar{
+        color:#5f6368;
+        font-size: 13;
+        display: flex;    
+        flex-wrap: nowrap;  
+        padding: 5px 5px 5px 13px; 
+    }
+
+        #advertising{
+            padding: 7px;
+        }
+
+        #business{
+            padding: 7px;
+        }
+
+        #about{
+            padding:7px;
+        }
+
+        #how-search-works{
+            padding: 7px;
+        }
 
 </style>
     <div id="container">
 
         <div id="header1">
-            <div id="gmail">Gmail</div>
-            <div id="images">Images</div>
-            <img src="profile-picture" id="profile" alt="profile">
+            <div class="selectable cursor" id="gmail">Gmail</div>
+            <div class="selectable cursor" id="images">Images</div>
+            <div id="cube-container" class="cursor">
+                <div class="cubes"></div>
+                <div class="cubes"></div>
+                <div class="cubes"></div>
+                <div class="cubes"></div>
+                <div class="cubes"></div>
+                <div class="cubes"></div>
+                <div class="cubes"></div>
+                <div class="cubes"></div>
+                <div class="cubes"></div>
+            </div>
+            <div id="profile" class="cursor">C</div>
         </div>
 
         <div id="main">
@@ -100,8 +193,8 @@
                     <input type="text" id="search-bar"></input>
                     <br>
                     <div id="buttons">
-                        <button>Google Search</button>
-                        <button>I'm feeling lucky</button>
+                        <button class="cursor">Google Search</button>
+                        <button class="cursor">I'm Feeling Lucky</button>
                     </div>
                 </form>
             </div>
@@ -109,6 +202,13 @@
 
         <div id="footer">
             <div id="country">Netherlands</div>
+            <div id="bottom-bar">
+                <div class="selectable cursor" id="advertising">Advertising</div>
+                <div class="selectable cursor" id="business">Business</div>
+                <div class="selectable cursor" id="about">About</div>
+                <div class="selectable cursor" id="how-search-works">How Search works</div>
+            </div>
+
         </div>
     </div>
 </html>
