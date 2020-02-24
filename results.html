@@ -2,6 +2,130 @@
 <title>Results</title>
 <style>
 
+#container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 11% 74% 15%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    #header{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: grid;
+        grid-template-rows: 60% 40%;
+        border-bottom: 1px solid black;
+    }
+
+        #upper-bar{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+            #ubleft{
+                grid-column-start: 1;
+                grid-column-end: 2;
+                display: flex;
+                align-items: center;
+            }
+
+                #logodiv{
+                    width: 90;
+                }
+                #logo{
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                #sbdiv{
+                    align-content: center;
+                    width: 650;
+                }
+
+                #search-form{
+                    margin: 0;
+                }
+                    #search-bar{
+                        border-radius: 24px;
+                        width: 650;
+                        height: 32;
+                    }
+
+            #ubright{
+                grid-column-start: 2;
+                grid-column-end: 3;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 13;
+            }
+
+            .ubdiv{
+                padding-left: 15;
+                padding-right: 15;
+            }
+
+        #lower-bar{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            align-items: center;
+            padding-left: 140;
+            font-size: 13;
+            color: #5f6368;
+        }
+
+            .lbdiv{
+                padding-left: 15;
+                padding-right: 15;
+            }
+
+                #settings{
+                    padding-left: 160;
+                }
+
+            .lbdiv:hover{
+                cursor: pointer;
+                color: #1A73E8;
+            }
+
+    #body{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding-left: 140;
+    }
+
+        .results{
+            border: 1px solid white;
+            border-radius: 1%;
+            margin: 20 0 20 0;
+            width: 650;
+        }
+
+        h3{
+            margin:2;
+            color: #1a0dab;
+            font-size: 20;
+            font-weight: normal;
+        }
+
+            h3:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+        p{
+            margin: 2;
+            font-size: 13;
+            color:#5f6368;
+        }
+
 </style>
 
 <div id="container">
@@ -9,24 +133,33 @@
     <div id="header">
 
         <div id="upper-bar">
-            <div id="logo">Logo</div>
-            <div id="search-bar">Search Bar</div>
-            <div id="profile">Profile</div>
+            <div id="ubleft">
+                <div class="ubdiv" id="logodiv">
+                    <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
+                </div>
+                <div class="ubdiv" id="sbdiv">
+                    <form id="search-form">
+                        <input type="text" id="search-bar" placeholder="     Things lieverds do">
+                    </form>
+                </div>
+            </div>
+            <div id="ubright">    
+                <div class="ubdiv" id="cubes">Cubes</div>
+                <div class="ubdiv" id="profile">Profile</div>
+            </div>
         </div>
 
         <div id="lower-bar">
-            <div>All</div>
-            <div>Images</div>
-            <div>News</div>
-            <div>Maps</div>
-            <div>Videos</div>
-            <div>More</div>
-            <div>Settings</div>
-            <div>Tools</div>
+            <div class="lbdiv" id="all">All</div>
+            <div class="lbdiv">Images</div>
+            <div class="lbdiv">News</div>
+            <div class="lbdiv">Maps</div>
+            <div class="lbdiv">Videos</div>
+            <div class="lbdiv">More</div>
+            <div class="lbdiv" id="settings">Settings</div>
+            <div class="lbdiv">Tools</div>
 
         </div>
-
-
 
     </div>
 
@@ -34,53 +167,52 @@
 
     <div id="body">
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 1</h1>
-            <h2>Information about Result</h2>
+            <p>huelvaiscool.com</p>
+            <h3>Top 10 things to do in Huelva</h3>
+            <p>Huelva?  What is that?  It is one of Spain's best kept secrets!  Huelva can be found an hour west of Sevilla.  It has beaches, ...</p>
         </div>
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 2</h1>
-            <h2>Information about Result</h2>
+            <p>elcaminodelnorte.com</p>
+            <h3>The best shots from the Camino del Norte</h3>
+            <p>The Camino del Norte involves lopen en slapen.  Here are the best shots from the section of the Camino between San Sebastian and Bilbao.</p>
         </div>
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 3</h1>
-            <h2>Information about Result</h2>
+            <p>secretsofpaisvasco.com</p>
+            <h3>Los Vascos estan orgullosos</h3>
+            <p>The Basque people are very proud of their heritage.  They will tell you about it without being asked.</p>
         </div>
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 4</h1>
-            <h2>Information about Result</h2>
+            <p>austriaisbeautiful.com</p>
+            <h3>Austria was really beautiful</h3>
+            <p>Weiner Schnitzel, Mountains, Fresh Air, Clear lake water, etc.</p>
         </div>
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 5</h1>
-            <h2>Information about Result</h2>
+            <p>americansdrivealot.com</p>
+            <h3>That one time we went to America</h3>
+            <p>Remember that one time that we went to America?  We were there for a few days and we drove around a lot.</p>
         </div>
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 6</h1>
-            <h2>Information about Result</h2>
+            <p>themostbeautifulcityintheworld.com</p>
+            <h3>Granada</h3>
+            <p>What a beautiful plek!  We can go here just to get away.  We don't have to do anything in particular.  Just walk through the streets and relax with a cana or a glass of vino tinto.  Lo que quieras.</p>
         </div>
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 7</h1>
-            <h2>Information about Result</h2>
+            <p>siciliawillbeguay.com</p>
+            <h3>Top 10 things to do in Sicily</h3>
+            <p>We will go to Sicily in June!  Ik heb er zin in, hoor!  I think Gioiosa Marea will be the coolest spot. ;)
+            </p>
         </div>
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 8</h1>
-            <h2>Information about Result</h2>
+            <p>website address</p>
+            <h3>Result 8</h3>
+            <p>Information about Result</p>
         </div>
         <div class="results">
-            <h3>website address</h3>
-            <h1>Result 9</h1>
-            <h2>Information about Result</h2>
+            <p>website address</p>
+            <h3>Result 9</h3>
+            <p>Information about Result</p>
         </div>
     </div>
-
-
 
 </div>
 
